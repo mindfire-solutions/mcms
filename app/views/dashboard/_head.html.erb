@@ -1,0 +1,30 @@
+<!--
+
+        @File Name                            :_head.html.erb
+
+	@Company Name                         :Mindfire Solutions Pvt. Ltd.
+
+	@Creator Name                         :Indranil Mukherjee
+
+	@Date Created                         :2012-07-12
+
+        @Date Modified                        :2012-08-01
+
+   	@Last Modification Details            :Code cleanup on head section
+
+        @Purpose                              :Main layout of mcms_authentication head section
+
+-->
+
+<head>
+  
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <title>MCMS</title>
+  <link type="image/x-icon" href="/assets/mcms/favicon.ico" rel="shortcut icon"/>
+  <%= stylesheet_link_tag    "dashboard", :media => "all" %>
+
+  <!-- This is to prevent from outside forgery -->
+  <%= csrf_meta_tags %>
+
+</head>

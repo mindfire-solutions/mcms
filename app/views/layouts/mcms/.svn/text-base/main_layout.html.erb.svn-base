@@ -1,0 +1,91 @@
+<!--
+
+        @File Name                            :main_layout.html.erb
+
+	@Company Name                         :Mindfire Solutions Pvt. Ltd.
+
+	@Creator Name                         :Indranil Mukherjee
+
+	@Date Created                         :2012-07-12
+
+        @Date Modified                        :2012-08-01
+
+   	@Last Modification Details            :Updating the main layout of mcms authentication
+
+        @Purpose                              :Main layout of mcms_authentication
+
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <%= render "layouts/mcms/head" %>
+
+  <body  class=" page-dashboard  env-production ">
+    <div id="wrapper">
+      <div class="true clearfix" id="header">
+        <div class="container clearfix">
+          	<%= link_to image_tag("/assets/mcms/logo_03.png", :class => "github-logo-4x",:height => "30"), '/mcms/users/logout',:alt => "mcms" %>
+          <div id="userbox">
+            <% unless user_signed_in? %>
+              <div id="user">
+                <%= link_to "Annonymous user","#",:class => "name",:style => "text-decoration:none;" %>
+              </div>
+
+              <ul id="user-links">
+                <li>
+                  <%= link_to "Log in","#",:class => "name",:style => "text-decoration:none;" %>
+                </li>
+              </ul>
+            <% else %>
+
+              <div id="user">
+              Welcome,
+                <%= link_to "#{current_user.first_name || current_user.email}","#", :class => "name", :style => "text-decoration:none;" %>
+              </div>
+              <ul id="user-links">
+                <li>
+                  <%= link_to "Log out" , "/mcms/users/logout" ,:class => "name",:style => "text-decoration:none;" %>
+                </li>
+              </ul>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="site clearfix"><%#= McmsAuthentication::Engine.root_path %>
+        <div class="container" id="site-container">
+          <div class="pagehead shrunken dashboard">
+			 <% if user_signed_in? %>
+		        <ul class="tabs">
+              <li ><%= link_to "Dashboard","/mcms/dashboard" %></li>
+		          <li><%= link_to "Pages","/mcms/pages" %></li>
+		          <li><%= link_to "Blog","/mcms/blog/posts" %></li>
+		          <li><%= link_to "Users","/mcms/users" %></li>
+		          <li><%= link_to "Resources","/mcms/resources" %></li>
+		        </ul>
+            <% end %>
+          </div><!-- /.pagehead -->
+
+          <div id="dashboard">
+            <%= yield %>
+          </div>
+        </div>
+        <div class="context-overlay"></div>
+      </div>
+      <div id="footer-push"></div><!-- hack for sticky footer -->
+    </div><!-- end of wrapper - hack for sticky footer -->
+
+    <!-- footer -->
+    <div id="footer">
+      <div class="upper-footer">
+      </div><!-- /.upper-footer -->
+      <div class="lower-footer">
+        <div class="container clearfix">
+          <p >&copy; 2012 <span >Mindfire Solutions Pvt. Ltd.</span>  All rights reserved.</p>
+          </div><!-- /#legal or /#legal_ie-->
+        </div><!-- /.site -->
+      </div><!-- /.lower-footer -->
+    <!-- /#footer -->
+
+  </body>
+</html>
+

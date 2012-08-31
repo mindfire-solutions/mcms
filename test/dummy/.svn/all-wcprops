@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/SVNHOME/!svn/ver/15711/mcms/trunk/mcms_gems/mcms/test/dummy
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/SVNHOME/!svn/ver/15711/mcms/trunk/mcms_gems/mcms/test/dummy/Rakefile
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/SVNHOME/!svn/ver/15711/mcms/trunk/mcms_gems/mcms/test/dummy/README.rdoc
+END
+config.ru
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/SVNHOME/!svn/ver/15711/mcms/trunk/mcms_gems/mcms/test/dummy/config.ru
+END

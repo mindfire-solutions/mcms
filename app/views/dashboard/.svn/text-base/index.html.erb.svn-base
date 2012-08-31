@@ -1,0 +1,133 @@
+<!--
+
+        @File Name                            :_head.html.erb
+
+	@Company Name                         :Mindfire Solutions Pvt. Ltd.
+
+	@Creator Name                         :Indranil Mukherjee
+
+	@Date Created                         :2012-07-12
+
+        @Date Modified                        :2012-08-01
+
+   	@Last Modification Details            :Code cleanup on head section
+
+        @Purpose                              :Main layout of mcms_authentication head section
+
+-->
+
+<div id="dashboard">
+
+  <% if flash[:notice] || flash[:error] %>
+
+    <div class="flash flash-notice" style="margin-top:10px;" id="flash"><%=  flash[:notice] || flash[:error] %></div>
+
+  <% end %>
+
+  <div class="news" id="all">
+
+
+    <% @all_events.each do |page| %>
+
+      <div class="alert">
+        
+        <div class="body">
+          
+          <span class="mini-icon mini-icon-issue-comment"></span>
+          <div class="title">
+
+            <a href="#"><%=  page.class %></a>
+            <span>
+
+              <% if page.class.to_s == "User" %>
+
+                <%= page.first_name %> was updated about
+
+              <% else %>
+
+                <%= page.title %> was updated about
+
+              <% end %>
+
+              <%=  distance_of_time_in_words(page.updated_at,Time.now) %> ago.
+
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    <% end %>
+
+    <div id="paginator">
+
+      <%= paginate @all_events %>
+
+    </div>
+
+  </div>
+  <div id="your-repos" class="repos">
+
+    <div class="top-bar">
+
+      <h2>Quick tasks </h2>
+      <a class="button new-repo" target="_new" href="/">Switch To Website</a>
+
+    </div>
+
+    <ul class="repo-list">
+
+      <li class="public source">
+
+        <a href="/mcms/pages/new">
+
+          <span class="mini-icon "></span>
+          <span class="owner">New</span>    <span class="repo">Page</span>
+          <span class="arrow"></span>
+
+        </a>
+
+      </li>
+      <li class="public source">
+
+        <a href="/mcms/users/new">
+
+          <span class="mini-icon "></span>
+          <span class="owner">New</span>    <span class="repo">User</span>
+          <span class="arrow"></span>
+          
+        </a>
+
+      </li>
+      <li class="public source">
+
+        <a href="/mcms/role/new">
+
+          <span class="mini-icon "></span>
+          <span class="owner">New</span>    <span class="repo">Role</span>
+          <span class="arrow"></span>
+          
+        </a>
+
+      </li>
+      <li class="public fork">
+
+        <a href="/mcms/blog/posts/new">
+
+          <span class="mini-icon "></span>
+          <span class="owner">New</span>   <span class="repo">Post</span>
+          <span class="arrow"></span>
+          
+        </a>
+
+      </li>
+
+    </ul>
+    
+    <div class="bottom-bar"></div>
+    
+  </div>
+    
+</div>
