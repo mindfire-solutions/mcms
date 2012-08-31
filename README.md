@@ -55,15 +55,11 @@ root :to => "pages#home"
 
 
 
-### Contributors
+### Note
 
-Everybody,we are looking forward for your valuable contributions. 
+We welcome your valuable suggestions and contributions to Mcms 
 
-### Maintainers
-
-* Vikram Kumar Mishra 
-* Indranil Mukherjee 
-* Debdutta 
+ 
 
 ## License
 
