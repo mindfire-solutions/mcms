@@ -57,7 +57,8 @@ root :to => "pages#home"
 
 ### Note
 
-We welcome your valuable suggestions and contributions to Mcms 
+This has most of the features required in a good CMS but it requires further testing to make it more robust and feature rich. So please pass on you valuable feedback 
+to help us make this better. 
 
  
 
