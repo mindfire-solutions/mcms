@@ -1,7 +1,7 @@
 ## Mcms
 
 
-Mcms is a flexible and most updated CMS solution for Rails 3 . It:
+Mcms is a flexible and most updated CMS solution for Rails 3 .
 
 * Is Rack based;
 * Is a complete solution for your website design;
