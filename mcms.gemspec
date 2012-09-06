@@ -6,12 +6,12 @@ require "mcms/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "mcms"
-  s.version     = "1.0.0"
-  s.authors     = ["Vikram Kumar Mishra"]
+  s.version     = "1.0.1"
+  s.authors     = ["Mindfire Solutions"]
   s.email       = ["Vikram.mishra@mindfiresolutions.com"]
-  s.homepage    = "https://192.168.10.251/svn/SVNHOME/mcms/trunk/mcms_gems/mcms"
-  s.summary     = "Summary of Mcms."
-  s.description = "Description of Mcms."
+  s.homepage    = "https://github.com/mindfire-solutions/mcms"
+  s.summary     = "A Gem which acts like a cms and helps in creating pages for a website."
+  s.description = "A Gem which acts like a cms and helps in creating pages for a website."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
